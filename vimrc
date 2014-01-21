@@ -1,4 +1,7 @@
-set nu linebreak 
+" This must be first, because it changes other options as side effect
+set nocompatible
+
+set linebreak 
 set textwidth=0
 set number                      " Line numbers on
 set showmatch                   " show matching ets/parenthesis
