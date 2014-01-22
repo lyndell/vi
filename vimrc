@@ -77,8 +77,8 @@ if &t_Co > 2 || has("gui_running")
    syntax on
 endif
 
-set list
-"set listchars=tab:>.,trail:.,extends:#,nbsp:.
+set nolist
+"set listchars=tab:>.,trail:.,extends:#,nbsp:.   " highlight whitespaces for you in a convenient way:
 autocmd filetype html,xml set listchars-=tab:>.
 
 " press <F2>, Vim will switch to paste mode, ... Then, you can disable paste mode again with another press of <F2>. Nice and simple. Compare paste mode disabled vs enabled:
