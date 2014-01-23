@@ -15,7 +15,7 @@ set shiftwidth=2  " number of spaces to use for autoindenting
 set softtabstop=2
 set expandtab
 
-' text
+" text
 set autoindent    " always set autoindenting on
 set wrap
 set textwidth=69
