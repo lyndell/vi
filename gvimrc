@@ -4,7 +4,7 @@
 set background=light
 colorscheme solarized
 
-colorscheme github
+colorscheme nuvola
 
 " GUI
 if has('gui_running')
