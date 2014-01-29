@@ -4,6 +4,8 @@
 set background=light
 colorscheme solarized
 
+colorscheme github
+
 " GUI
 if has('gui_running')
   "set gfn=Luxi\ Mono\ 12
