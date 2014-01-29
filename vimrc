@@ -58,6 +58,7 @@ set backspace=indent,eol,start
 
 
 colorscheme elflord
+colorscheme  darkblue 
 
 
 " timestamps

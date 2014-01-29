@@ -5,6 +5,9 @@ set background=light
 colorscheme solarized
 
 colorscheme nuvola
+let moria_style = 'white' 
+colorscheme  moria 
+
 
 " GUI
 if has('gui_running')
