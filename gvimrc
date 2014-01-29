@@ -1,5 +1,9 @@
 " gvimrc
 
+" Solarize
+set background=light
+colorscheme solarized
+
 " GUI
 if has('gui_running')
   "set gfn=Luxi\ Mono\ 12

@@ -57,9 +57,8 @@ set backspace=indent,eol,start
 
 
 
-" Solarize
-" set background=light
-" colorscheme solarized
+colorscheme elflord
+
 
 " timestamps
 :nnoremap <F5> "=strftime("%c")<CR>P
