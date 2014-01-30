@@ -4,9 +4,9 @@
 set background=light
 colorscheme solarized
 
-colorscheme nuvola
 let moria_style = 'white' 
 colorscheme  moria 
+colorscheme nuvola
 
 
 " GUI
