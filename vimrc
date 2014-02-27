@@ -31,8 +31,10 @@ set showcmd       " show partial commands in status
 set ttyfast
 set ruler
 set laststatus=2
-set norelativenumber " display how far away each line is from the current
 set mouse=a     " To enable the mouse, use:
+if v:version >= 730
+  set norelativenumber " display how far away each line is from the current
+endif
 
 
 set title                " change the terminal's title
@@ -40,21 +42,33 @@ set novisualbell         " don't flash
 set noerrorbells         " don't beep
 
 " file
-set undofile       " undo previous actions even after you close and reopen a file.
 set wildmenu       " show list instead of just completing
 set wildignore=*.swp,*.bak,*.pyc,*.class
-set nobackup       " don't write a backup file! 
-"set noswapfile
+                   " A file that matches with one of these
+                   " patterns is ignored when completing file
+                   " or directory names
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Files, backups and undo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup       " DON'T: Make a backup before overwriting a file.  
+                   "        Leave it around after the file has been
+                   "        successfully written.  
+set nowritebackup  " don't: Make a backup before overwriting a file. 
+                   "        The backup is removed after the file was
+                   "        successfully written, unless the 'backup'
+                   "        option is also on. 
+set noswapfile
+:if has('persistent_undo')
+  set undofile       " undo previous actions even after you close
+                     " and reopen a file.
+fi
 
 
 " backspace
 set bs=2
 set backspace=indent,eol,start
-
-
-
-
-
 
 
 colorscheme elflord
@@ -91,6 +105,9 @@ endif
 set nolist
 "set listchars=tab:>.,trail:.,extends:#,nbsp:.   " highlight whitespaces for you in a convenient way:
 autocmd filetype html,xml set listchars-=tab:>.
+
+" Use <F11> to toggle between 'paste' and 'nopaste'
+set pastetoggle=<F11>
 
 " press <F2>, Vim will switch to paste mode, ... Then, you can disable paste mode again with another press of <F2>. Nice and simple. Compare paste mode disabled vs enabled:
 set pastetoggle=<F2>
