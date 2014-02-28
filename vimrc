@@ -60,10 +60,10 @@ set nowritebackup  " don't: Make a backup before overwriting a file.
                    "        successfully written, unless the 'backup'
                    "        option is also on. 
 set noswapfile
-:if has('persistent_undo')
+if has('persistent_undo')
   set undofile       " undo previous actions even after you close
                      " and reopen a file.
-fi
+endif
 
 
 " backspace
