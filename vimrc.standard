@@ -29,6 +29,7 @@ set cursorline    " highlight current line
 set showcmd       " show partial commands in status
 set showmode            " show current mode
 set ttyfast
+set shortmess=aTI       " No "welcome" message - shut up!
 set ruler               " Show the cursor position all the time
 set laststatus=2
 
@@ -65,14 +66,14 @@ set backspace=indent,eol,start
 set backspace=2         " Allow backspacing over everything in insert mode
 
 
-colorscheme elflord
-colorscheme darkblue 
-colorscheme delek
-
-
 " timestamps
 :nnoremap <F5> "=strftime("%c")<CR>P
 :inoremap <F5> <C-R>=strftime("%c")<CR>
+:nnoremap <F5> "=strftime("%d/%m/%Y %H:%M:%S")<CR>P
+:inoremap <F5> <C-R>=strftime("%d/%m/%Y %H:%M:%S")<CR>
+"old one
+"imap <f5>   <C-R>=strftime("%d/%m/%Y %H:%M:%S")<CR> 
+
 
 
 " Strip all trailing whitespace from a file, using ,W
@@ -86,23 +87,10 @@ if has('autocmd')
   autocmd BufRead,BufNewFile  *.md,*.MD,*.markdown set filetype=mkd
 endif
 
-
-if &t_Co >= 256 || has("gui_running")
-"   colorscheme mustang
-endif
-
-if &t_Co > 2 || has("gui_running")
-   " switch syntax highlighting on, when the terminal has colors
-   syntax on
-endif
-
 set nolist
 "set listchars=tab:>.,trail:.,extends:#,nbsp:.   " highlight whitespaces for you in a convenient way:
 autocmd filetype html,xml set listchars-=tab:>.
 
-" Use <F11> to toggle between 'paste' and 'nopaste'
-set pastetoggle=<F11>
-
-" press <F2>, Vim will switch to paste mode, ... Then, you can disable paste mode again with another press of <F2>. Nice and simple. Compare paste mode disabled vs enabled:
+" Press <F2> to toggle between 'paste' and 'nopaste'
 set pastetoggle=<F2>
 

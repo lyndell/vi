@@ -19,8 +19,21 @@ if has('gui_running')
   winpos 351 141
   set lines=40
   set columns=98
-
 endif
 
 " set gui-mouse
 "
+
+
+" For Solarized.
+" http://ethanschoonover.com/solarized/vim-colors-solarized
+" 
+" if has('gui_running')
+"     set background=light
+" else
+"     set background=dark
+" endif
+" 
+
+
+
