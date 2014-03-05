@@ -22,3 +22,5 @@ if has('gui_running')
 
 endif
 
+" set gui-mouse
+"

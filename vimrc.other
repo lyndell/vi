@@ -1,0 +1,7 @@
+set mouse=a     " To enable the mouse in terminals
+
+if v:version >= 730
+  set norelativenumber " display how far away each line is from the current
+endif
+
+

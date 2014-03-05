@@ -3,18 +3,16 @@ set nocompatible  " turn off  vi compatibility.
 set modelines=0   " prevents some security exploits
 
 " tab settings
-set tabstop=2
-set shiftwidth=2  " number of spaces to use for autoindenting
+set tabstop=2           " spaces to use for tabstops
+set shiftwidth=2        " spaces to use for autoindent
 set softtabstop=2
-set expandtab
+set expandtab           " expand tabs to spaces
 
 " text
 set autoindent    " always set autoindenting on
 set wrap
 set textwidth=69
-set textwidth=0
-set linebreak
-set number        " Line numbers on
+set number        " Line numbers on, always
 
 " search
 set hlsearch      " highlight search terms
@@ -25,17 +23,14 @@ set smartcase     " if one or more char is uppercase, case-sensitive
 nmap <silent> ,/ :nohlsearch<CR> " clearing highlighted searches
 
 " interface
-syntax on
+syntax on         " Turn on that syntax highlighting
+                  " help:  http://vimdoc.sourceforge.net/htmldoc/syntax.html
 set cursorline    " highlight current line
 set showcmd       " show partial commands in status
+set showmode            " show current mode
 set ttyfast
-set ruler
+set ruler               " Show the cursor position all the time
 set laststatus=2
-set mouse=a     " To enable the mouse, use:
-if v:version >= 730
-  set norelativenumber " display how far away each line is from the current
-endif
-
 
 set title                " change the terminal's title
 set novisualbell         " don't flash
@@ -66,9 +61,8 @@ if has('persistent_undo')
 endif
 
 
-" backspace
-set bs=2
 set backspace=indent,eol,start
+set backspace=2         " Allow backspacing over everything in insert mode
 
 
 colorscheme elflord
