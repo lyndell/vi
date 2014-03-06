@@ -4,6 +4,10 @@ if v:version >= 730
   set norelativenumber " display how far away each line is from the current
 endif
 
+if has('persistent_undo')
+  set undofile       " undo previous actions even after you close
+                     " and reopen a file.
+endif
 
 " autcmd
 "
