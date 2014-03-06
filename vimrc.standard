@@ -1,6 +1,7 @@
 " This must be first, because it changes other options as side effect
 set nocompatible  " turn off  vi compatibility. 
 set modelines=0   " prevents some security exploits
+syntax on         " Switch syntax highlighting on
 
 " tab settings
 set tabstop=2           " spaces to use for tabstops
@@ -12,6 +13,7 @@ set expandtab           " expand tabs to spaces
 set autoindent    " always set autoindenting on
 set wrap
 set textwidth=69
+set linebreak     " wrap at wordbreak
 set number        " Line numbers on, always
 
 " search
@@ -20,11 +22,8 @@ set incsearch     " find as you type search
 set showmatch     " show matching ets/parenthesis
 set ignorecase    " ignore case when searching
 set smartcase     " if one or more char is uppercase, case-sensitive
-nmap <silent> ,/ :nohlsearch<CR> " clearing highlighted searches
 
 " interface
-syntax on         " Turn on that syntax highlighting
-                  " help:  http://vimdoc.sourceforge.net/htmldoc/syntax.html
 set cursorline    " highlight current line
 set showcmd       " show partial commands in status
 set showmode            " show current mode
@@ -32,6 +31,17 @@ set ttyfast
 set shortmess=aTI       " No "welcome" message - shut up!
 set ruler               " Show the cursor position all the time
 set laststatus=2
+set backspace=2         " Allow backspacing over everything in insert mode
+
+" timestamps
+:nnoremap <F5> "=strftime("%d/%m/%Y %H:%M:%S")<CR>P
+:inoremap <F5> <C-R>=strftime("%d/%m/%Y %H:%M:%S")<CR>
+" old one
+"imap <f5>   <C-R>=strftime("%d/%m/%Y %H:%M:%S")<CR> 
+
+" Press <F2> to toggle between 'paste' and 'nopaste'
+set pastetoggle=<F2>
+
 
 set title                " change the terminal's title
 set novisualbell         " don't flash
@@ -60,37 +70,4 @@ if has('persistent_undo')
   set undofile       " undo previous actions even after you close
                      " and reopen a file.
 endif
-
-
-set backspace=indent,eol,start
-set backspace=2         " Allow backspacing over everything in insert mode
-
-
-" timestamps
-:nnoremap <F5> "=strftime("%c")<CR>P
-:inoremap <F5> <C-R>=strftime("%c")<CR>
-:nnoremap <F5> "=strftime("%d/%m/%Y %H:%M:%S")<CR>P
-:inoremap <F5> <C-R>=strftime("%d/%m/%Y %H:%M:%S")<CR>
-"old one
-"imap <f5>   <C-R>=strftime("%d/%m/%Y %H:%M:%S")<CR> 
-
-
-
-" Strip all trailing whitespace from a file, using ,W
-nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
-
-imap <f5>   <C-R>=strftime("%d/%m/%Y %H:%M:%S")<CR>
-
-
-if has('autocmd')
-  autocmd BufRead,BufNewFile  *.md,*.MD,*.markdown set filetype=markdown
-  autocmd BufRead,BufNewFile  *.md,*.MD,*.markdown set filetype=mkd
-endif
-
-set nolist
-"set listchars=tab:>.,trail:.,extends:#,nbsp:.   " highlight whitespaces for you in a convenient way:
-autocmd filetype html,xml set listchars-=tab:>.
-
-" Press <F2> to toggle between 'paste' and 'nopaste'
-set pastetoggle=<F2>
 

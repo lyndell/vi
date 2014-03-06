@@ -1,3 +1,19 @@
+" insert timestamp Notepad style
+"
+:nnoremap <F5> "=strftime("%c")<CR>P
+:inoremap <F5> <C-R>=strftime("%c")<CR>
+
+imap <f5>   <C-R>=strftime("%d/%m/%Y %H:%M:%S")<CR>
+
+
+" search
+nmap <silent> ,/ :nohlsearch<CR> " clearing highlighted searches
+
+
+" Strip all trailing whitespace from a file, using ,W
+nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
+
+
 http://www.oualline.com/vim-cook.html
 
 
