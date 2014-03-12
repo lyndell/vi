@@ -10,27 +10,29 @@ set softtabstop=2
 set expandtab           " expand tabs to spaces
 
 " text
-set autoindent    " always set autoindenting on
+set autoindent            " always set autoindenting on
+filetype plugin indent on " File type detection and language-dependent indenting.
 set wrap
 set textwidth=69
-set linebreak     " wrap at wordbreak
-set number        " Line numbers on, always
-
-" search
-set hlsearch      " highlight search terms
-set incsearch     " find as you type search
-set showmatch     " show matching ets/parenthesis
-set ignorecase    " ignore case when searching
-set smartcase     " if one or more char is uppercase, case-sensitive
-
-" interface
-set cursorline    " highlight current line
-set showcmd       " show partial commands in status
+set linebreak           " wrap at wordbreak
+set number              " Line numbers on, always
+                       
+" search               
+set hlsearch            " highlight search terms
+set incsearch           " find as you type search
+set showmatch           " show matching ets/parenthesis
+set ignorecase          " ignore case when searching
+set smartcase           " if one or more char is uppercase, case-sensitive
+                       
+" interface            
+set cursorline          " highlight current line
+set showcmd             " show partial commands in status
 set showmode            " show current mode
 set ttyfast
 set shortmess=aTI       " No "welcome" message - shut up!
 set ruler               " Show the cursor position all the time
 set laststatus=2
+set backspace=indent,eol,start " Make backspace behave in a sane manner.
 set backspace=2         " Allow backspacing over everything in insert mode
 
 " timestamps
