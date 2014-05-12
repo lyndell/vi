@@ -1,30 +1,58 @@
+" ---------------------------------------------------------------------------
+" Basics
+"
+" from:  http://vimuniversity.com/samples/your-first-vimrc-should-be-nearly-empty
+"
 " This must be first, because it changes other options as side effect
-set nocompatible  " turn off  vi compatibility. 
-set modelines=0   " prevents some security exploits
-syntax on         " Switch syntax highlighting on
+" 
+" ---------------------------------------------------------------------------
+
+set nocompatible               " Use Vim settings;  Turn off  vi compatibility. 
+set modelines=0                " prevents some security exploits
+set backspace=indent,eol,start " Make backspace behave in a sane manner.
+                               " Allow backspacing over everything in insert mode
+syntax on                      " Switch syntax highlighting on
+filetype plugin indent on      " File type detection and language-dependent indenting.
 
 " tab settings
-set tabstop=2           " spaces to use for tabstops
-set shiftwidth=2        " spaces to use for autoindent
-set softtabstop=2
-set expandtab           " expand tabs to spaces
+set tabstop=2                  " spaces to use for tabstops
+set shiftwidth=2               " spaces to use for autoindent
+set softtabstop=2             
+set expandtab                  " expand tabs to spaces
+set nosmarttab                 " always use tabstops
 
-" text
-set autoindent            " always set autoindenting on
-filetype plugin indent on " File type detection and language-dependent indenting.
+" Formattage
 set wrap
 set textwidth=69
+set textwidth=60
 set linebreak           " wrap at wordbreak
 set number              " Line numbers on, always
-                       
-" search               
+set foldmethod=indent   " makes it easier to read long code
+set formatoptions+=ro   " comment continuation
+set autoindent          " always set autoindenting on
+set smartindent     " smartindent! :)
+" 
+"                    - After a line ending in '{'.
+"                    - After a line starting with a keyword from 'cinwords'.
+"                    - Before a line starting with '}' (only with the "O" command).
+" 
+
+
+" ---------------------------------------------------------------------------
+"  Search
+" ---------------------------------------------------------------------------
+
 set hlsearch            " highlight search terms
 set incsearch           " find as you type search
 set showmatch           " show matching ets/parenthesis
 set ignorecase          " ignore case when searching
 set smartcase           " if one or more char is uppercase, case-sensitive
                        
-" interface            
+                       
+" ----------------------------------------------------------------------------
+"  Interface
+" ----------------------------------------------------------------------------
+
 set cursorline          " highlight current line
 set showcmd             " show partial commands in status
 set showmode            " show current mode
@@ -32,8 +60,6 @@ set ttyfast
 set shortmess=aTI       " No "welcome" message - shut up!
 set ruler               " Show the cursor position all the time
 set laststatus=2
-set backspace=indent,eol,start " Make backspace behave in a sane manner.
-set backspace=2         " Allow backspacing over everything in insert mode
 
 " timestamps
 :nnoremap <F5> "=strftime("%d/%m/%Y %H:%M:%S")<CR>P
@@ -68,4 +94,5 @@ set nowritebackup  " don't: Make a backup before overwriting a file.
                    "        successfully written, unless the 'backup'
                    "        option is also on. 
 set noswapfile
+set autoread                          " reload files (no local changes only)
 
