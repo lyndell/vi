@@ -26,3 +26,9 @@ autocmd filetype html,xml set listchars-=tab:>.
 augroup mkd
  autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
 augroup END
+
+" Get that filetype stuff happening
+filetype on
+filetype plugin on
+filetype indent on
+
