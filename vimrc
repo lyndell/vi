@@ -28,9 +28,10 @@ set textwidth=60
 set linebreak           " wrap at wordbreak
 set number              " Line numbers on, always
 set foldmethod=indent   " makes it easier to read long code
+set foldlevelstart=10   " open most folds by default
 set formatoptions+=ro   " comment continuation
 set autoindent          " always set autoindenting on
-set smartindent     " smartindent! :)
+set smartindent         " smartindent! :)
 " 
 "                    - After a line ending in '{'.
 "                    - After a line starting with a keyword from 'cinwords'.
@@ -43,6 +44,8 @@ set smartindent     " smartindent! :)
 " ---------------------------------------------------------------------------
 
 set hlsearch            " highlight search terms
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
 set incsearch           " find as you type search
 set showmatch           " show matching ets/parenthesis
 set ignorecase          " ignore case when searching
@@ -60,6 +63,7 @@ set ttyfast
 set shortmess=aTI       " No "welcome" message - shut up!
 set ruler               " Show the cursor position all the time
 set laststatus=2
+set lazyredraw          " redraw only when we need to.
 
 " timestamps
 :nnoremap <F5> "=strftime("%d/%m/%Y %H:%M:%S")<CR>P
