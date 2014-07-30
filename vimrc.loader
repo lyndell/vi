@@ -1,0 +1,8 @@
+if has('win32') || has('win64')
+  set runtimepath^=$HOME\Dropbox\dotfile\vim
+  source $HOME\Dropbox\dotfile\vim\vimrc
+else
+  set runtimepath^=~/Dropbox/dotfiles/vim
+  source ~/Dropbox/dotfiles/vim/vimrc
+endif
+
