@@ -2,7 +2,7 @@
 
 set -x
 
-if [ ! -e ~/.vimrc ]; then
+if [ -e ~/.vimrc ]; then
   echo "~/.vimrc already exists"
   exit;
 else
@@ -26,7 +26,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   if [ -h ~/.vimrc ]; then  # file is a symbolic link
     echo "~/.vimrc is symlink, not appending host specific source file."
   else 
-    echo "source ~/Dropbox/dotfiles/vimrc.Mac >> ~/.vimrc "
+    echo "source ~/Dropbox/dotfiles/vim/vimrc.Mac" >> ~/.vimrc 
   fi
 
 elif [[ "$OSTYPE" == "cygwin" ]]; then
