@@ -66,10 +66,10 @@ set laststatus=2
 set lazyredraw          " redraw only when we need to.
 
 " timestamps
-:nnoremap <F5> "=strftime("%d/%m/%Y %H:%M:%S")<CR>P
-:inoremap <F5> <C-R>=strftime("%d/%m/%Y %H:%M:%S")<CR>
+":nnoremap <F5> "=strftime("%d/%m/%Y %H:%M:%S")<CR>P
+":inoremap <F5> <C-R>=strftime("%d/%m/%Y %H:%M:%S")<CR>
 " old one
-"imap <f5>   <C-R>=strftime("%d/%m/%Y %H:%M:%S")<CR> 
+imap <f5>   <C-R>=strftime("%Y/%m/%d %H:%M:%S")<CR> 
 
 " Press <F2> to toggle between 'paste' and 'nopaste'
 set pastetoggle=<F2>
