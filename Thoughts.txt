@@ -1,0 +1,11 @@
+10/03/2014 22:41:20
+
+Really, why do I have two files.  I have practically all the settings from the minimal in my own configuration file.
+
+
+11/03/2014 23:32:39
+
+just one vimrc, mine.
+
+
+
