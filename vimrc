@@ -100,3 +100,21 @@ set nowritebackup  " don't: Make a backup before overwriting a file.
 set noswapfile
 set autoread                          " reload files (no local changes only)
 
+
+
+" ---------------------------------------------------------------------------
+"  Mac specific vimrc settings
+" ---------------------------------------------------------------------------
+
+if has("mac") || has("macunix")
+  "
+  "   mac         Macintosh version of Vim.
+  "   macunix     Macintosh version of Vim, using Unix files (OS-X).
+  "
+  "
+  "
+  colorscheme badwolf
+
+endif
+
+
