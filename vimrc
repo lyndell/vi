@@ -113,6 +113,7 @@ if has("mac") || has("macunix")
   "
   "
   "
+  colorscheme badwolf
 
 endif
 
