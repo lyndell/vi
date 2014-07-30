@@ -1,20 +1,12 @@
-" Mac specific
+" Purpose:  Mac specific vimrc settings
+"
+" 
 
 
 " syntax enable     " help:  http://vimdoc.sourceforge.net/htmldoc/syntax.html
 " syntax on
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
-let g:solarized_termcolors=256
-colorscheme solarized
 " 
 " set history=50          " keep 50 lines of command history
 " 
-
-
-
 
 
