@@ -1,11 +1,6 @@
 " gvimrc
 
-"let moria_style = 'white' 
-"colorscheme  moria 
-colorscheme nuvola
-
-
-" GUI
+" GUI test
 if has('gui_running')
   "set gfn=Luxi\ Mono\ 12
   "set guifont=Source\ Code\ Pro:h18
@@ -17,4 +12,7 @@ if has('gui_running')
   set lines=40
   set columns=98
 endif
+
+colorscheme nuvola
+
 
