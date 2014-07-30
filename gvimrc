@@ -1,11 +1,7 @@
 " gvimrc
 
-" Solarize
-set background=light
-colorscheme solarized
-
-let moria_style = 'white' 
-colorscheme  moria 
+"let moria_style = 'white' 
+"colorscheme  moria 
 colorscheme nuvola
 
 
@@ -15,26 +11,10 @@ if has('gui_running')
   "set guifont=Source\ Code\ Pro:h18
   "set guifont=Bitstream\ Vera\ Sans\ Mono\ 12
   "set gfn=Monospace\ 12
-  set guioptions+=b
+  set guioptions+=b   " Bottom (horizontal) scrollbar is present.  
 
   winpos 351 141
   set lines=40
   set columns=98
 endif
-
-" set gui-mouse
-"
-
-
-" For Solarized.
-" http://ethanschoonover.com/solarized/vim-colors-solarized
-" 
-" if has('gui_running')
-"     set background=light
-" else
-"     set background=dark
-" endif
-" 
-
-
 
