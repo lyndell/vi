@@ -13,16 +13,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
   # ...
   echo "linux-gnu"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  # ...
-  echo "darwin"
-  #if [ -f ~/.vimrc ]; then  # file is a regular file (not a directory or device file)
-  #  echo "is regular file"
-  #fi
-
-  #
-  #
-  #
-  #
+  echo "Installing vimrc for Mac"
   if [ -h ~/.vimrc ]; then  # file is a symbolic link
     echo "~/.vimrc is symlink, not appending host specific source file."
   else 
