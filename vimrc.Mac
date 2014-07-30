@@ -1,12 +1,13 @@
 " Purpose:  Mac specific vimrc settings
 "
-" 
+"
 
+if has("mac") || has("macunix")
+"
+" mac         Macintosh version of Vim.
+" macunix     Macintosh version of Vim, using Unix files (OS-X).
+"
 
-" syntax enable     " help:  http://vimdoc.sourceforge.net/htmldoc/syntax.html
-" syntax on
-" 
-" set history=50          " keep 50 lines of command history
-" 
+endif
 
 
