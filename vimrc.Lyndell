@@ -8,9 +8,8 @@
 "
 " 
 
-set runtimepath^=~/Dropbox/dotfiles/vim
-source vimrc.tiny
 
+" ----------------------------------------------------------------------------
 "
 " Don't put any lines in your vimrc that you don't understand.
 "   -- Doug Black
