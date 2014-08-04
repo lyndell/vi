@@ -1,6 +1,4 @@
-When I don't have a working `.vimrc`, I issue the following
-to get a more usage state.  Gotta' have line numbers and
-color.
+When I don't have a working `.vimrc`, I issue the following to get a more usage state.  Gotta' have line numbers and color.
 
     :set nu ai ts=2 sw=2
     :syntax on
