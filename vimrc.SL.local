@@ -1,5 +1,5 @@
 set runtimepath^=~/Documents/VIMRC
 source ~/Documents/VIMRC/vimrc.tiny
 source ~/Documents/VIMRC/vimrc.Lyndell
-source ~/Documents/VIMRC/vimrc.Mac
+source ~/Documents/VIMRC/vimrc.SL
 

@@ -8,8 +8,8 @@ then
 fi
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-  # ...
-  echo "linux-gnu"
+  # TODO: parameterize for any location of source file 
+  cp -p vimrc.SL.local ~/.vimrc
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   # TODO: parameterize for any location of source file 
   cp -p vimrc.Mac.local ~/.vimrc
