@@ -7,7 +7,10 @@
 " Modified: 
 "
 " 
-
+if has("compatible")
+  set nu ai ts=2 sw=2
+  syntax on
+else
 
 " ----------------------------------------------------------------------------
 "
@@ -55,4 +58,5 @@ set wildignore=*.swp,*.bak,*.pyc,*.class
 imap <f5>   <C-R>=strftime("%Y/%m/%d %H:%M:%S")<CR> 
 
 colorscheme badwolf
+endif
 
