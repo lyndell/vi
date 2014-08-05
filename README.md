@@ -1,4 +1,10 @@
-Bare minimum I want when using `vi`.  The line numbering and syntax highlighting makes such a huge difference in appearance.
+# Purpose
+
+The default installation of VIM imitates vi, lacking many wonderful features.  
+
+# Bare minimum
+
+This is the bare minimum I want when using `vi`.  The line numbering and syntax highlighting makes such a huge difference in appearance.  The following can be typed in:
 
     :set nu ai ts=2 sw=2
     :syntax on
@@ -10,10 +16,7 @@ The same can be saved in `.vimrc`, in long form:
     set tabstop=2           " spaces to use for tabstops
     set shiftwidth=2        " spaces to use for autoindent
 
-If tab characters are an issue:
+# Install
 
-    set expandtab           " expand tabs to spaces
-
-followed with `:retab` to convert the tab characters to
-spaces.
-
+	curl -s <URL> >   ~/.vimrc
+	
