@@ -1,6 +1,6 @@
 " Name:     Mac specific vim settings
 " Author:   Lyndell
-" URL:      http://Lyndell.US/virc/
+" URL:      http://www.Lyndell.US/vi/
 "           
 " License:  
 " Created:  July 31, 2014, when I should have been sleeping
