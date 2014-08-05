@@ -1,0 +1,12 @@
+" Name:     Mac specific vim settings
+" Author:   Lyndell
+" URL:      http://Lyndell.US
+"           
+" License:  
+" Created:  July 31, 2014, when I should have been sleeping
+" Modified: 
+"
+" 
+set nu ai ts=2 sw=2
+syntax on
+

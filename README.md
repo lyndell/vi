@@ -1,4 +1,4 @@
-When I don't have a working `.vimrc`, I issue the following to get a more usage state.  Gotta' have line numbers and color.
+Bare minimum I want when using `vi`.  The line numbering and syntax highlighting makes such a huge difference in appearance.
 
     :set nu ai ts=2 sw=2
     :syntax on
