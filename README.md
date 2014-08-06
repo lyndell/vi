@@ -18,5 +18,5 @@ The same can be saved in `.vimrc`, in long form:
 
 # Install
 
-Download ans save the `vimrc` file to `~/.vimrc`.
+Download and save the `vimrc` file to `~/.vimrc`.
 
