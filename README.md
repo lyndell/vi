@@ -18,5 +18,5 @@ The same can be saved in `.vimrc`, in long form:
 
 # Install
 
-	curl -s <URL> >   ~/.vimrc
-	
+Download ans save the `vimrc` file to `~/.vimrc`.
+
