@@ -1,4 +1,4 @@
-" Name:     Mac specific vim settings
+" Name:     bare minimum vi settings
 " Author:   Lyndell
 " URL:      http://www.Lyndell.US/vi/
 "           
